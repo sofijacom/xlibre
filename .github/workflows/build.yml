@@ -53,7 +53,7 @@ jobs:
           repository: void-linux/void-packages
           ref: master
 
-      - name: Merge this repository into void-linux/xlibre
+      - name: Merge this repository into void-linux/void-packages
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
