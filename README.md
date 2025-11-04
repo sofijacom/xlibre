@@ -21,5 +21,5 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 # Available packages
 | package | source | automatic update |
 |:--------|:-------|:-----------------|
-| XLibre Xserver | https://github.com/X11Libre/xserver/                             | :heavy_check_mark: |
+| XLibre | https://github.com/X11Libre/xserver/                             | :heavy_check_mark: |
 
