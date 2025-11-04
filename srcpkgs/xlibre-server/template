@@ -1,6 +1,6 @@
 # Template file for 'xlibre'
 pkgname=xlibre-server
-version=25.0.0.14
+version=xlibre-xserver-25.0.0.14
 revision=1
 build_style=meson
 configure_args="-Dipv6=true -Dxorg=true -Dxnest=true -Dxephyr=true -Dxvfb=true -Dhal=false -Dudev=true -Dxkb_dir=/usr/share/X11/xkb -Dxkb_output_dir=/var/lib/xkb -Dlinux_acpi=true -Dlinux_apm=false -Dsuid_wrapper=true -Dxcsecurity=true -Dglamor=true -Ddri2=true -Ddri3=true -Dglx=true -Dsystemd_logind=$(vopt_if elogind true false)"
