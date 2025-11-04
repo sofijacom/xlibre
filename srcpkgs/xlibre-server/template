@@ -90,4 +90,4 @@ xlibre-server-xvfb_package()
          vmove usr/lib/pkgconfig
          vmove usr/share/aclocal
      }
-}
+ }
