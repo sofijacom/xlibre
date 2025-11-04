@@ -16,3 +16,10 @@ printf "repository=https://github.com/sofijacom/xlibre/releases/latest/download/
 sudo xbps-install -S
 ```
 _These packages will now be in your **OctoXBPS** package manager. When a new version of the program is released, you will update it along with all the other packages._
+
+
+# Available packages
+| package | source | automatic update |
+|:--------|:-------|:-----------------|
+| XLibre Xserver | https://github.com/X11Libre/xserver/                             | :heavy_check_mark: |
+
