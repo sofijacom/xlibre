@@ -21,6 +21,7 @@ jobs:
     - run: sudo apt update -y && sudo apt install -y jq git curl
     - run: bash ./srcpkgs/xlibre-server/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-libinput/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-input-evdev/update.sh
     - name: Check for updates
       id: check-updates
       run: |
