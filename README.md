@@ -21,5 +21,12 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 # Available packages
 | package | source | automatic update |
 |:--------|:-------|:-----------------|
-| XLibre | https://github.com/X11Libre/xserver/                             | :heavy_check_mark: |
+| xlibre server                    | https://github.com/X11Libre/xserver/                    | :heavy_check_mark: |
+| xlibre-server-devel              | https://github.com/X11Libre                             | :heavy_check_mark: |
+| xlibre-server-xephyr             | https://github.com/X11Libre                             | :heavy_check_mark: |
+| xlibre-server-xnest              | https://github.com/X11Libre                             | :heavy_check_mark: |
+| xlibre-server-xvfb               | https://github.com/X11Libre                             | :heavy_check_mark: |
+| xlibre-xf86-input-libinput       | https://github.com/X11Libre                             | :heavy_check_mark: |
+| xlibre-xf86-input-libinput-devel | https://github.com/X11Libre                             | :heavy_check_mark: |
+
 
