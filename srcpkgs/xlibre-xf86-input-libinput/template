@@ -23,7 +23,7 @@ post_install() {
 
 xlibre-xf86-input-libinput-devel_package() {
 	lib32disabled=yes
-	depends="${makedepends}"
+	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
