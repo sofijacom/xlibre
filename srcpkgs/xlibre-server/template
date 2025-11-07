@@ -18,6 +18,7 @@ replaces="xf86-video-modesetting>=0 glamor-egl>=0"
 conf_files="/etc/X11/Xwrapper.config"
 build_options="elogind"
 desc_option_elogind="Rootless XLibre support with elogind"
+conflicts="xorg-server"
 lib32disabled=yes
 
 # disable VBE on non-x86 systems
@@ -80,6 +81,13 @@ xlibre-server-xvfb_package()
         vmove usr/bin/Xvfb
         vmove usr/share/man/man1/Xvfb.1
     }
+}
+
+xlibre-server-common_package() {
+	short_desc+="- common files"
+	pkg_install() {
+		vmove usr/lib/xorg/protocol.txt
+	}
 }
 
  xlibre-server-devel_package() {
