@@ -17,7 +17,7 @@ lib32disabled=yes
 
 do_install() {
 
-  ./autogen.sh
+  bash: ./autogen.sh
   ./configure --prefix=/usr
   make
 
