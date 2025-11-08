@@ -15,27 +15,27 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=70a8a65ec56cce7057b8491f68744c6883debe8750948bb290ae7b1c3ec28dfc
 lib32disabled=yes
 
-do_install() {
+#do_install() {
 
 #  ./autogen.sh
 #  ./configure --prefix=/usr
 #  make
 
-  vmkdir usr/include/xorg
-  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/include/evdev-properties.h /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/include/xorg/evdev-properties.h
+#  vmkdir usr/include/xorg
+#  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/include/evdev-properties.h /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/#include/xorg/evdev-#properties.h
 
-  vmkdir usr/lib/pkgconfig
-  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/xorg-evdev.pc /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/lib/pkgconfig/xorg-evdev.pc
+#  vmkdir usr/lib/pkgconfig
+#  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/xorg-evdev.pc /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/lib/pkgconfig/#xorg-evdev.pc
 
-  vmkdir usr/lib/xorg/modules/xlibre-25.0/input
-  cp -r /usr/lib/xorg/modules/xlibre-25.0/input/inputtest_drv.so /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/lib/xorg/modules/xlibre-25.0/input/evdev_drv.so
+#  vmkdir usr/lib/xorg/modules/xlibre-25.0/input
+#  cp -r /usr/lib/xorg/modules/xlibre-25.0/input/inputtest_drv.so /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/lib/xorg/modules/xlibre-25.0/input/#evdev_drv.so
 
-  vmkdir usr/share/X11/xorg.conf.d
-  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/10-evdev.conf /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/share/X11/xorg.conf.d/10-evdev.conf
+#  vmkdir usr/share/X11/xorg.conf.d
+#  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/10-evdev.conf /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/share/X11/xorg.conf.d/10-evdev.conf
 
-  vmkdir usr/share/man/man4
-  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/man/evdev.4 /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/share/man/man4/evdev.4
-}
+#  vmkdir usr/share/man/man4
+#  cp -r /builddir/xlibre-xf86-input-evdev-2.11.0.2/man/evdev.4 /destdir/xlibre-xf86-input-evdev-2.11.0.2/usr/share/man/man4/evdev.4
+#}
 
 post_install() {
 	vlicense COPYING
