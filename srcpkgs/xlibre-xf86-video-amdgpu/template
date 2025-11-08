@@ -8,7 +8,7 @@ configure_args="--enable-places-udisks2"
 hostmakedepends="pkg-config"
 makedepends="xlibre-server xlibre-server-devel xlibre-server-common
 autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
-depends="mesa libdrm glibc"
+depends="virtual?xserver-abi-videodrv-23.0"
 short_desc="XLibre fork of X.Org amdgpu video driver"
 maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
