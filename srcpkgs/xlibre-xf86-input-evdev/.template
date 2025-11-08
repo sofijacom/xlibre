@@ -27,7 +27,7 @@ post_install() {
 	vlicense COPYING
 }
 
-xlibre-input-evdev-devel_package() {
+xlibre-xf86-input-evdev-devel_package() {
 	lib32disabled=yes
 	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
