@@ -6,7 +6,7 @@ revision=2
 build_style=meson
 # build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="xlibre-server-devel libXi-devel libXrandr-devel libXinerama-devel eudev-libudev-devel"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common xorgproto libXi-devel libXrandr-devel libXinerama-devel eudev-libudev-devel autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros meson gobject-introspection cmake glib libevdev-devel"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -20,7 +20,7 @@ lib32disabled=yes
 
 prepare() {
 #  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
-  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
+  cd ${srcpkgs}/${pkgname}
   patch -Np1 -i ${srcpkgs}/old-patches/aggregate.patch
 }
 
