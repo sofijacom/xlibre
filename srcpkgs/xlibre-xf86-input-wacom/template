@@ -24,7 +24,7 @@ prepare() {
 
 pre_configure() {
 
-    --prefix=/usr \
+#    --prefix=/usr \
     --libexecdir=lib \
     -D xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
     -D unittests=disabled
