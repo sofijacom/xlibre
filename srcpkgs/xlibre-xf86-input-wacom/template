@@ -20,13 +20,13 @@ lib32disabled=yes
 
 prepare() {
   cd ${DESTDIR}/${_pkgname}-${pkgname}-${version}
-  patch -Np1 -i ${srcdir}/aggregate.patch
+  patch -Np1 -i ${srcdir}/old-patches/aggregate.patch
 }
 
 pre_configure() {
 
   ./autogen.sh
-  ./configure --prefix=/usr \
+  ./configure --prefix=/usr
 #    --libexecdir=lib \
 #    --xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
 #    --unittests=disabled
