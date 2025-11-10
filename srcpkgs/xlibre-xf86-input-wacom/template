@@ -1,0 +1,29 @@
+# Template file for 'xf86-input-wacom'
+pkgname=xlibre-xf86-input-wacom
+_pkgname=xf86-input-wacom
+version=1.2.3.1
+revision=2
+build_style=meson
+hostmakedepends="pkg-config"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection"
+depends="libXi libXinerama libXrandr libX11 glibc"
+short_desc="XLibre fork of X.Org Wacom tablet driver"
+maintainer="Sofiya <sofiya@v.com>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/X11Libre"
+conflicts="xf86-input-wacom"
+replaces="xf86-input-wacom"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=8c1942cbf90ee80d6505d115bab27461680c623d7acddf6be931224ea8176c36
+lib32disabled=yes
+
+#pre_configure() {
+
+#  ./autogen.sh
+#  ./configure --prefix=/usr
+#  make
+#}
+
+post_install() {
+	vlicense COPYING
+}
