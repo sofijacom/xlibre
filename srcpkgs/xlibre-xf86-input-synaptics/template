@@ -6,7 +6,7 @@ revision=1
 build_style=gnu-configure
 # configure_args=""
 hostmakedepends="pkg-config"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros python3-libevdev"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros libevdev-devel"
 depends="libXtst libevdev libX11 libXi glibc"
 short_desc="XLibre fork of X.Org Synaptics driver for notebook touchpads"
 maintainer="Sofiya <sofiya@v.com>"
@@ -28,4 +28,9 @@ pre_configure() {
 
 post_install() {
 	vlicense COPYING
+
+	  cat <<MSG
+>>> xf86-input-synaptics driver is on maintenance mode and
+    xf86-input-libinput driver must be prefered over.
+MSG
 }
