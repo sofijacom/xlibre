@@ -3,10 +3,10 @@ pkgname=xlibre-xf86-input-wacom
 _pkgname=xf86-input-wacom
 version=1.2.3.1
 revision=2
-build_style=meson
-# build_style=gnu-configure
+#build_style=meson
+build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common xorgproto libXi-devel libXrandr-devel libXinerama-devel eudev-libudev-devel autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros meson gobject-introspection cmake glib libevdev-devel python3-libevdev libevdev-tools python3-pytest python3-yaml attr libevdev, pytest, yaml"
+makedepends="xlibre-server-devel xorgproto libXi libXrandr-devel libXinerama-devel eudev-libudev-devel autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros meson gobject-introspection cmake libevdev-devel"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -18,27 +18,21 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
+
 prepare() {
-#  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
-  cd ${srcpkgs}/${pkgname}
-  patch -Np1 -i ${srcpkgs}/old-patches/aggregate.patch
+  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
+  patch -Np1 -i ${srcpkgs}/aggregate.patch
 }
 
-#pre_configure() {
+pre_configure() {
 
-#  ./autogen.sh
-#  ./configure --prefix=/usr \
-#  make
+set -- --prefix="/usr" --libdir="$(readlink -e $(ls -d /usr/lib*/xorg/modules/input/../../../ | head -n1))"
+if test -x ./autogen.sh; then ./autogen.sh "$@"; else ./configure "$@"; fi && make || echo "Build Failed"
 
-#  meson ${pkgname}-${version} build \
-#    --prefix=/usr \
-#    --libexecdir=lib \
-#    -D xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
-#    -D unittests=disabled
-
-#  meson configure build
-#  ninja -C build
-#}
+#  meson setup builddir/ -Dprefix=/usr
+#  cd builddir/
+# meson compile
+}
 
 post_install() {
 	vlicense GPL
