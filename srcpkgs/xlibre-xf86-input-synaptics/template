@@ -16,7 +16,7 @@ conflicts="xf86-input-synaptics synaptics"
 replaces="synaptics"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=3e6bc8453f5f957074db28b12e4826ef65ab017e0dd5e34a29d57692ce0c7fe5
-lib32disabled=yes
+#lib32disabled=yes
 install=xf86-input-synaptics.install
 
 pre_configure() {
