@@ -4,7 +4,7 @@ _pkgname=xf86-input-wacom
 version=1.2.3.1
 revision=2
 build_style=meson
-build_style=gnu-configure
+# build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="xlibre-server-devel libXi-devel libXrandr-devel libXinerama-devel eudev-libudev-devel"
 depends="virtual?xserver-abi-input-24_1"
@@ -19,6 +19,7 @@ checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
 prepare() {
+#  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
   cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
   patch -Np1 -i ${srcpkgs}/old-patches/aggregate.patch
 }
