@@ -5,7 +5,7 @@ version=1.2.3.1
 revision=2
 build_style=meson
 hostmakedepends="pkg-config"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake ninja"
 depends="libXi libXinerama libXrandr libX11 glibc"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -36,5 +36,5 @@ pre_configure() {
 }
 
 post_install() {
-	vlicense COPYING
+	vlicense GPL
 }
