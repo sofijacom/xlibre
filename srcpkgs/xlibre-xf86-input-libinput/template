@@ -3,9 +3,10 @@ pkgname=xlibre-xf86-input-libinput
 _pkgname=xf86-input-libinput
 version=1.5.1.0
 revision=1
-build_style=meson
+#build_style=meson
+build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="libinput-devel xlibre-server-devel"
+makedepends="libinput-devel xlibre-server-devel gawk"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of the generic input driver for the X.Org server based on libinput"
 maintainer="Sofiya <sofiya@v.com>"
@@ -23,7 +24,8 @@ post_install() {
 
 xlibre-xf86-input-libinput-devel_package() {
 	lib32disabled=yes
-	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
+	depends="${makedepends}"
+#	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
