@@ -32,6 +32,7 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 | xlibre-xf86-input-evdev-devel       | https://github.com/X11Libre/xf86-input-evdev            | :heavy_check_mark: |
 | xlibre-xf86-input-libinput          | https://github.com/X11Libre/xf86-input-libinput         | :heavy_check_mark: |
 | xlibre-xf86-input-libinput-devel    | https://github.com/X11Libre/xf86-input-libinput         | :heavy_check_mark: |
+| xlibre-xf86-input-synaptics         | https://github.com/X11Libre/xf86-input-synaptics        | :heavy_check_mark: |
 | xlibre-xf86-input-vmmouse           | https://github.com/X11Libre/xf86-input-vmmouse          | :heavy_check_mark: |
 | xlibre-xf86-video-amdgpu            | https://github.com/X11Libre/xf86-video-amdgpu           | :heavy_check_mark: |
 
