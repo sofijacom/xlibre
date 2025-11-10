@@ -27,5 +27,5 @@ pre_configure() {
 
 post_install() {
 	vlicense COPYING
-	rm -rfv "${pkgdir}"/usr/{lib,share}/hal
+	rm -rfv "${DESTDIR}"/usr/{lib,share}/hal
 }
