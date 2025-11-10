@@ -27,8 +27,6 @@ pre_configure() {
 
   ./autogen.sh
   ./configure --prefix=/usr \
-  --libexecdir=lib \
-  --xorg-confdir=/usr/share/X11/xorg.conf.d/ \
   --unittests=disabled
   make
 
