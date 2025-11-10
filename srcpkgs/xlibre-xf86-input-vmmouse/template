@@ -12,7 +12,6 @@ maintainer="Sofiya <sofiya@v.com>"
 license="custom"
 homepage="https://github.com/X11Libre"
 conflicts="xf86-input-vmmouse xorg-server"
-provides="${_pkgname}"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=84aca84a0cbe3fcbb4d5171b0314fe6e2bf98992ae33fc657dd0a1c43b48feb1
 lib32disabled=yes

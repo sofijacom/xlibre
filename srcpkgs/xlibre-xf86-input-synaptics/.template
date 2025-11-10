@@ -13,7 +13,6 @@ license="MIT"
 homepage="https://github.com/X11Libre"
 conflicts="xf86-input-synaptics synaptics"
 replaces="synaptics"
-provides="${_pkgname} synaptics"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=${SHA256}
 lib32disabled=yes
