@@ -18,27 +18,22 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
-prepare() {
+#prepare() {
 #  cd ${srcpkgs}/${_pkgname}-${pkgname}-${version}
-  cd ${srcpkgs}/${pkgname}
-  patch -Np1 -i ${srcpkgs}/old-patches/aggregate.patch
-}
+#  cd ${srcpkgs}/${pkgname}
+#  patch -Np1 -i ${srcpkgs}/old-patches/aggregate.patch
+#}
 
-#pre_configure() {
+pre_configure() {
 
 #  ./autogen.sh
 #  ./configure --prefix=/usr \
 #  make
 
-#  meson ${pkgname}-${version} build \
-#    --prefix=/usr \
-#    --libexecdir=lib \
-#    -D xorg-conf-dir=/usr/share/X11/xorg.conf.d/ \
-#    -D unittests=disabled
-
-#  meson configure build
-#  ninja -C build
-#}
+  meson setup builddir/ -Dprefix=/usr
+  cd builddir/
+  meson compile
+}
 
 post_install() {
 	vlicense GPL
