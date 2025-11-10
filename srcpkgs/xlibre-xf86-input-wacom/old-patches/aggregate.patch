@@ -1,5 +1,5 @@
---- a/src/x11/xf86Wacom.c	2025-07-05 08:26:36.884056528 +0200
-+++ b/src/x11/xf86Wacom.c	2025-07-05 08:26:31.873956035 +0200
+--- a/hw/x11/xf86Wacom.c	2025-07-05 08:26:36.884056528 +0200
++++ b/hw/x11/xf86Wacom.c	2025-07-05 08:26:31.873956035 +0200
 @@ -68,11 +68,20 @@
  wcmLog(WacomDevicePtr priv, WacomLogType type, const char *format, ...)
  {
