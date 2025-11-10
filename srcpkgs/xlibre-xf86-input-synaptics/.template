@@ -16,7 +16,6 @@ replaces="xf86-input-synaptics"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=${SHA256}
 lib32disabled=yes
-install=xf86-input-synaptics.install
 
 pre_configure() {
 
@@ -27,4 +26,9 @@ pre_configure() {
 
 post_install() {
 	vlicense COPYING
+
+	  cat <<MSG
+>>> xf86-input-synaptics driver is on maintenance mode and
+    xf86-input-libinput driver must be prefered over.
+MSG
 }
