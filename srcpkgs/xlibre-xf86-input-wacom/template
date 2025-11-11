@@ -4,8 +4,8 @@ _pkgname=xf86-input-wacom
 version=1.2.3.1
 revision=2
 archs="x86_64*"
-# build_style=meson
-build_style=gnu-configure
+build_style=meson
+# build_style=gnu-configure
 # configure_args="--with-default-dri=3"
 hostmakedepends="pkg-config"
 makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make cmake patch pkgconf pkg-config xorgproto"
@@ -20,16 +20,21 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
-pre_configure() {
+#pre_configure() {
 
-  ./autogen.sh
-  ./configure --prefix=/usr \
-  make
-}
+#  ./autogen.sh
+#  ./configure --prefix=/usr
+#  make
+#}
+
+#do_install() {
+#	rm -rf ${DESTDIR}/usr/lib/systemd
+#}
 
 post_install() {
-	vlicense COPYING
-	rm -r "${DESTDIR}/usr/lib/systemd"
+
+	rm -rf ${DESTDIR}/usr/lib/systemd
+	vlicense GPL
 }
 
 xlibre-xf86-input-wacom-devel_package() {
