@@ -38,4 +38,4 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 | xlibre-xf86-video-amdgpu            | https://github.com/X11Libre/xf86-video-amdgpu           | :heavy_check_mark: |
 | xlibre-xf86-video-ati               | https://github.com/X11Libre/xf86-video-ati              | :heavy_check_mark: |
 | xlibre-xf86-video-nouveau           | https://github.com/X11Libre/xf86-video-nouveau          | :heavy_check_mark: |
-
+| xlibre-xf86-video-intel           | https://github.com/X11Libre/xf86-video-intel              | :heavy_check_mark: |
