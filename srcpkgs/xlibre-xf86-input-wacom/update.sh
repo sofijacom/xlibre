@@ -4,7 +4,7 @@ printf "Checking latest version\n"
 
 __dir="$(dirname "${BASH_SOURCE[0]}")"
 
-LATEST_VERSION=$(gh release list --repo X11Libre/xf86-input-wacom --json name,tagName,isLatest --jq '.[] | select(.isLatest)|.tagName')
+LATEST_VERSION=$(gh release list --repo X11Libre/xf86-input-wacom/tags --json name,tagName,isLatest --jq '.[] | select(.isLatest)|.tagName')
 export VERSION=${LATEST_VERSION#"xlibre-xf86-video-wacom-"}
 CURRENT_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
 

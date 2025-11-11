@@ -16,7 +16,7 @@ homepage="https://github.com/X11Libre"
 conflicts="xf86-input-wacom"
 replaces="xf86-input-wacom"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=8c1942cbf90ee80d6505d115bab27461680c623d7acddf6be931224ea8176c36
+checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
 # pre_configure() {
