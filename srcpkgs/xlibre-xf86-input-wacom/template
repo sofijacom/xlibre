@@ -1,7 +1,7 @@
 # Template file for 'xf86-input-wacom'
 pkgname=xlibre-xf86-input-wacom
 _pkgname=xf86-input-wacom
-version=
+version=1.2.3.1
 revision=2
 archs="x86_64*"
 build_style=meson
@@ -16,7 +16,7 @@ homepage="https://github.com/X11Libre"
 conflicts="xf86-input-wacom"
 replaces="xf86-input-wacom"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=ee53444d96db76c8c1e1e6ee86c54050c9c00e6066f8b8fac4819ce92369a49f
+checksum=8c1942cbf90ee80d6505d115bab27461680c623d7acddf6be931224ea8176c36
 lib32disabled=yes
 
 # pre_configure() {
