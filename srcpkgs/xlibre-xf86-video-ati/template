@@ -1,7 +1,7 @@
 # Template file for 'xf86-video-ati'
 pkgname=xlibre-xf86-video-ati
 _pkgname=xf86-video-ati
-version=22.0.0.3
+version=xlibre-xf86-video-ati-22.0.0.3
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
@@ -12,7 +12,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-ati"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=4d9925766f18d244b8e5d2e3c8737b9cfb8c86eb48ab7a6aa649992ac836b44f
+checksum=ee53444d96db76c8c1e1e6ee86c54050c9c00e6066f8b8fac4819ce92369a49f
 lib32disabled=yes
 CFLAGS="-fcommon"
 LDFLAGS="-Wl,-z,lazy"
