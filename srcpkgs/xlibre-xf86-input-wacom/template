@@ -21,7 +21,7 @@ lib32disabled=yes
 pre_configure() {
 
 #  meson ${_pkgname}-${pkgname}-${version} build
-  meson configure build
+  meson configure
   ninja -C build
 }
 
