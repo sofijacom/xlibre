@@ -22,7 +22,7 @@ pre_configure() {
 
 #  meson ${_pkgname}-${pkgname}-${version} build
   meson configure
-#  ninja
+  ninja
 }
 
 post_install() {
