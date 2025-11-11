@@ -19,8 +19,9 @@ checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
 pre_configure() {
-
-#  meson ${pkgname}-${version} build
+  mkdir -p build
+  cd build
+  meson build
   meson configure
   ninja
 }
