@@ -28,11 +28,11 @@ post_install() {
 	vlicense COPYING
 }
 
-#xf86-input-synaptics-devel_package() {
-#	lib32disabled=yes
-#	short_desc+=" - development files"
-#	pkg_install() {
-#		vmove usr/include
-#		vmove usr/lib/pkgconfig
-#	}
-#}
+xf86-input-synaptics-devel_package() {
+	lib32disabled=yes
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
