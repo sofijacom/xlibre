@@ -20,8 +20,7 @@ conflicts="xf86-input-libinput"
 
 pre_configure() {
 
-#  ./autogen.sh
-  autoreconf -vif
+  ./autogen.sh
   ./configure --prefix=/usr
   make
 }
