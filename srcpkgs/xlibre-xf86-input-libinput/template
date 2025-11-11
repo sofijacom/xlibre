@@ -18,6 +18,14 @@ lib32disabled=yes
 replaces="xf86-input-libinput"
 conflicts="xf86-input-libinput"
 
+pre_configure() {
+
+#  ./autogen.sh
+  autoreconf -vif
+  ./configure --prefix=/usr
+  make
+}
+
 post_install() {
 	vlicense COPYING
 }
