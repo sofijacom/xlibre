@@ -22,11 +22,11 @@ pre_configure() {
 
 #  meson ${_pkgname}-${pkgname}-${version} build
   meson configure
-  ninja -C
+#  ninja
 }
 
 post_install() {
-	vlicense COPYING
+	vlicense GPL # COPYING
 }
 
 xlibre-xf86-input-wacom-devel_package() {
