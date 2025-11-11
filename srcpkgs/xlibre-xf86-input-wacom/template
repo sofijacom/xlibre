@@ -5,9 +5,9 @@ version=1.2.3.1
 revision=2
 # build_style=meson
 build_style=gnu-configure
-# configure_args="--with-default-dri=3 --libexecdir=/lib"
+configure_args="--with-default-dri=3 --libexecdir=/lib"
 hostmakedepends="pkg-config"
-makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make cmake patch pkgconf"
+makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make cmake patch pkgconf pkg-config"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
