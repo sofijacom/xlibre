@@ -3,8 +3,7 @@ pkgname=xlibre-xf86-input-libinput
 _pkgname=xf86-input-libinput
 version=1.5.1.0
 revision=1
-# build_style=meson
-build_style=gnu-configure
+build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libinput-devel xlibre-server-devel"
 depends="virtual?xserver-abi-input-24_1"
@@ -17,13 +16,6 @@ checksum=f1be5a443af78307af18103a6bb614021fe163380b0eb43dec820a2389fbd6c8
 lib32disabled=yes
 replaces="xf86-input-libinput"
 conflicts="xf86-input-libinput"
-
-pre_configure() {
-
-  ./autogen.sh
-  ./configure --prefix=/usr
-  make
-}
 
 post_install() {
 	vlicense COPYING

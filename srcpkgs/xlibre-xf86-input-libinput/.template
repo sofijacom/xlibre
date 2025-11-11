@@ -3,8 +3,7 @@ pkgname=xlibre-xf86-input-libinput
 _pkgname=xf86-input-libinput
 version=${VERSION}
 revision=1
-# build_style=meson
-build_style=gnu-configure
+build_style=meson
 hostmakedepends="pkg-config"
 makedepends="libinput-devel xlibre-server-devel"
 depends="virtual?xserver-abi-input-26_1"
@@ -16,7 +15,6 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=${SHA256}
 lib32disabled=yes
 
-
 post_install() {
 	vlicense COPYING
 }
@@ -24,7 +22,6 @@ post_install() {
 xlibre-xf86-input-libinput-devel_package() {
 	lib32disabled=yes
 	depends="${makedepends}"
-#	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
