@@ -3,8 +3,8 @@ pkgname=xlibre-xf86-input-libinput
 _pkgname=xf86-input-libinput
 version=1.5.1.0
 revision=1
-build_style=meson
-# build_style=gnu-configure
+# build_style=meson
+build_style=gnu-configure
 hostmakedepends="pkg-config"
 makedepends="libinput-devel xlibre-server-devel"
 depends="virtual?xserver-abi-input-24_1"
@@ -25,7 +25,6 @@ post_install() {
 xlibre-xf86-input-libinput-devel_package() {
 	lib32disabled=yes
 	depends="${makedepends}"
-#	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
