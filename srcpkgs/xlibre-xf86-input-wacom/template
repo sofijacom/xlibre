@@ -6,14 +6,15 @@ revision=2
 build_style=meson
 # configure_args="--with-default-dri=3 --libexecdir=/lib"
 hostmakedepends="pkg-config"
-makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
+# makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
+makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/X11Libre"
 conflicts="xf86-input-wacom"
-replaces="xf86-input-wacom"
+replaces="xlibre-xf86-input-wacom"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
