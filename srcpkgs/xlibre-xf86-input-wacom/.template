@@ -4,7 +4,7 @@ _pkgname=xf86-input-synaptics
 version=${VERSION}
 revision=1
 build_style=gnu-configure
-hostmakedepends="pkg-config"
+hostmakedepends="pkg-config git automake libtool xorg-util-macros"
 makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros libevdev-devel"
 depends="libXtst libevdev libX11 libXi glibc"
 short_desc="XLibre fork of X.Org Synaptics driver for notebook touchpads"
@@ -17,8 +17,16 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=${SHA256}
 lib32disabled=yes
 
+pre_configure() {
+
+  ./autogen.sh
+  ./configure --prefix=/usr
+  make
+}
+
 post_install() {
 	vlicense COPYING
+	rm -r "${DESTDIR}/usr/lib/systemd"
 }
 
 xlibre-xf86-input-wacom-devel_package() {
