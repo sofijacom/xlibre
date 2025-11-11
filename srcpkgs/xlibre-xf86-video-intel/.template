@@ -1,0 +1,99 @@
+# Template file for 'xf86-video-intel'
+pkgname=xlibre-xf86-video-intel
+_pkgname=xf86-video-intel
+version=${VERSION}
+revision=1
+build_style=gnu-configure
+configure_args="--with-default-dri=3"
+hostmakedepends="git automake libtool pkg-config xorg-util-macros"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros libXScrnSaver-devel libXcursor-devel libXinerama-devel libXrandr-devel libXvMC-devel "
+depends="virtual?xserver-abi-video-25_1 mesa-dri"
+short_desc="XLibre fork Intel video driver"
+maintainer="Sofiya <sofiya@v.com>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-intel"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=${SHA256}
+lib32disabled=yes
+
+CFLAGS="-fcommon"
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	NOCONFIGURE=1 ./autogen.sh
+}
+
+post_install() {
+	vlicense COPYING
+}
+
+
+
+
+# Template file for 'xf86-video-nouveau'
+pkgname=xlibre-xf86-video-nouveau
+_pkgname=xf86-video-nouveau
+version=${VERSION}
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-25_1 mesa-dri"
+short_desc="XLibre fork NVIDIA video driver"
+maintainer="Sofiya <sofiya@v.com>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-nouveau"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=${SHA256}
+lib32disabled=yes
+
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+
+  ./autogen.sh
+  ./configure --prefix=/usr
+  make
+}
+
+post_install() {
+	vlicense COPYING
+}
+
+
+
+
+
+
+
+
+
+
+# Template file for 'xf86-video-amdgpu'
+pkgname=xlibre-xf86-video-amdgpu
+_pkgname=xf86-video-amdgpu
+version=${VERSION}
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends=""
+short_desc="XLibre fork of X.Org amdgpu video driver"
+maintainer="Sofiya <sofiya@v.com>"
+license="MIT"
+homepage="https://lists.freedesktop.org/mailman/listinfo/amd-gfx"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=${SHA256}
+lib32disabled=yes
+
+pre_configure() {
+
+  ./autogen.sh
+  ./configure --prefix=/usr \
+    --enable-glamor
+  make
+}
+
+post_install() {
+	vlicense COPYING
+}
