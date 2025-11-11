@@ -3,11 +3,12 @@ pkgname=xlibre-xf86-input-wacom
 _pkgname=xf86-input-wacom
 version=1.2.3.1
 revision=2
-build_style=meson
+# build_style=meson
+build_style=gnu-configure
 # configure_args="--with-default-dri=3 --libexecdir=/lib"
 hostmakedepends="pkg-config"
 # makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
-makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel libXtst-devel libXvMC-devel eudev-libudev-devel gobject-introspection xorg-util-macros"
+makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -18,6 +19,13 @@ replaces="xlibre-xf86-input-wacom"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
+
+pre_configure() {
+
+  ./autogen.sh
+  ./configure --prefix=/usr \
+  make
+}
 
 xlibre-xf86-input-wacom-devel_package() {
 	lib32disabled=yes
