@@ -25,6 +25,7 @@ jobs:
     - run: bash ./srcpkgs/xlibre-xf86-video-amdgpu/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-vmmouse/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-synaptics/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-ati/update.sh
     - name: Check for updates
       id: check-updates
       run: |
