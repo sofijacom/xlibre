@@ -22,10 +22,6 @@ LDFLAGS="-Wl,-z,lazy"
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh
-
-#  ./autogen.sh
-#  ./configure --prefix=/usr \
-#  make
 }
 
 post_install() {
