@@ -7,8 +7,7 @@ revision=2
 build_style=gnu-configure
 # configure_args="--with-default-dri=3 --libexecdir=/lib"
 hostmakedepends="pkg-config"
-# makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
-makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros"
+makedepends="xlibre-server-devel libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel gobject-introspection xorg-util-macros autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make cmake patch pkgconf"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -23,7 +22,7 @@ lib32disabled=yes
 pre_configure() {
 
   ./autogen.sh
-  ./configure --prefix=/usr \
+  ./configure --prefix=/usr
   make
 }
 
