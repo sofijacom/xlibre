@@ -6,7 +6,7 @@ revision=2
 build_style=meson
 # configure_args="--with-default-dri=3 --libexecdir=/lib"
 hostmakedepends="pkg-config"
-makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake ninja libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
+makedepends="xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf meson gobject-introspection cmake libXrandr-devel libXinerama-devel libXi-devel eudev-libudev-devel"
 depends="virtual?xserver-abi-input-24_1"
 short_desc="XLibre fork of X.Org Wacom tablet driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -18,18 +18,6 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=961f7b229e79e585a85b59be395e54392c00a3766204de95af832d2fa59207ed
 lib32disabled=yes
 
-pre_configure() {
-  mkdir -p build
-  cd build
-  meson build
-  meson configure
-  ninja
-}
-
-post_install() {
-	vlicense GPL # COPYING
-}
-
 xlibre-xf86-input-wacom-devel_package() {
 	lib32disabled=yes
 	short_desc+=" - development files"
@@ -38,4 +26,3 @@ xlibre-xf86-input-wacom-devel_package() {
 		vmove usr/lib/pkgconfig
 	}
 }
-
