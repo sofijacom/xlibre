@@ -28,7 +28,7 @@ lib32disabled=yes
 
 post_install() {
 
-	rm -rf ${DESTDIR}/usr/lib/systemd
+	rm -rfv ${DESTDIR}/usr/lib/systemd
 	vlicense GPL
 }
 
