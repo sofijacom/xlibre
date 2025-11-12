@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#
 
 printf "Checking latest version\n"
 
