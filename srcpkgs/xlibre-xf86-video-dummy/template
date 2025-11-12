@@ -1,0 +1,30 @@
+# Template file for 'xf86-video-dummy'
+pkgname=xlibre-xf86-video-dummy
+_pkgname=xf86-video-dummy
+version=0.4.1.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+## makedepends="xlibre-server-devel autoconf xorgproto automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+makedepends="xlibre-server-devel"
+depends="virtual?xserver-abi-video-25_1"
+short_desc="XLibre dummy video driver"
+maintainer="Sofiya <sofiya@v.com>"
+license="MIT"
+homepage="https://lists.freedesktop.org/mailman/listinfo/amd-gfx"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${_pkgname}-${pkgname}-${version}.tar.gz"
+checksum=85df099b4b22ab41b25c850f44741092be44d201994a3d8963fd997f6dd365be
+lib32disabled=yes
+
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+
+  ./autogen.sh
+  ./configure --prefix=/usr
+  make
+}
+
+post_install() {
+	vlicense COPYING
+}
