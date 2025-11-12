@@ -1,6 +1,6 @@
 # Template file for 'xlibre'
 pkgname=xlibre
-version=1
+version=1.0.0
 revision=1
 metapackage=yes
 depends="xlibre-server xorg-fonts xauth xinit"
