@@ -144,6 +144,7 @@ jobs:
           tag_name: ${{ env.TAG }}
           files: |
             ./hostdir/binpkgs/*.xbps
+            ./hostdir/binpkgs/*.sha256sum
             ./hostdir/binpkgs/*.sig2
             ./hostdir/binpkgs/*repodata
 
