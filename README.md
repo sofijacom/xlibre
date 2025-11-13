@@ -10,7 +10,7 @@ printf "repository=https://github.com/sofijacom/xlibre/releases/latest/download/
 
 > [!IMPORTANT]
 > 
-> _Then type in the terminal `sudo xbps-install -S` and accept the fingerprint (Y)_
+> _Synchronize the repository `sudo xbps-install -S` and accept the fingerprint (Y)_
 
 ```shell
 sudo xbps-install -S
