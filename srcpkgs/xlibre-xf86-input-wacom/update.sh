@@ -1,23 +1,34 @@
 #!/usr/bin/env bash
-#
 
 printf "Checking latest version\n"
 
 __dir="$(dirname "${BASH_SOURCE[0]}")"
 
-LATEST_VERSION=$(gh release list --repo X11Libre/xf86-input-wacom/tags --json name,tagName,isLatest --jq '.[] | select(.isLatest)|.tagName')
-export VERSION=${LATEST_VERSION#"xlibre-xf86-video-wacom-"}
-CURRENT_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
+LATEST_VERSION=$(git ls-remote --tags --refs --sort="v:refname" https://github.com/X11Libre/xf86-input-wacom xlibre-xf86-input-wacom-\* | tail -n1 | sed 's/.*\///')
+VERSION=${LATEST_VERSION#"xlibre-xf86-input-wacom-"}
+CUR_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
+CUR_TIMESTAMP=$(grep -E '^timestamp=' ${__dir}/template | cut -d= -f2)
+CURRENT_VERSION=$(printf "%s-%s" "${CUR_VERSION}" "${CUR_TIMESTAMP}")
 
 printf "Latest version is: %s\nLatest built version is: %s\n" "${VERSION}" "${CURRENT_VERSION}"
 [ "${CURRENT_VERSION}" = "${VERSION}" ] && printf "No new version to release\n" && exit 0
 
+export TIMESTAMP=${VERSION##*-}
+export VERSION=${VERSION%-*}
+
 # No preprepped checksum files, need to download the binary and calculate it myself
-gh release download -R X11Libre/xserver --archive=tar.gz --output "${VERSION}.tar.gz"
-export SHA256=$(sha256sum ./${VERSION}.tar.gz | cut -d ' ' -f1 )
-rm ./ ${VERSION}.tar.gz
+curl --fail -sL --output xf86-input-wacom.tar.gz https://github.com/X11Libre/xf86-input-wacom/archive/refs/tags/${LATEST_VERSION}.tar.gz
+export SHA256=$(sha256sum ./xf86-input-wacom.tar.gz | cut -d ' ' -f1 )
+rm ./xf86-input-wacom.tar.gz
 [[ ! ${SHA256} =~ ^[a-z0-9]+$ ]] && printf "got junk instead of sha256\n" && exit 1
 
-envsubst '${SHA256} ${VERSION}' < ${__dir}/.template > ${__dir}/template
+git clone --no-checkout --depth 1 --filter=blob:none --single-branch --branch ${LATEST_VERSION} https://github.com/X11Libre/xf86-input-wacom.git xf86-input-wacom
+cd xf86-input-wacom
+export GIT_SHORT_COMMIT=$(git rev-list --max-count=1 --abbrev-commit HEAD)
+cd ..
+rm -rf xf86-input-wacom
+[[ ! ${GIT_SHORT_COMMIT} =~ ^[a-z0-9]+$ ]] && printf "got junk instead of git short commit\n" && exit 1
 
-printf "xlibre-xf86-video-wacom template updated\n"
+envsubst '${SHA256} ${VERSION} ${GIT_SHORT_COMMIT} ${TIMESTAMP}' < ${__dir}/.template > ${__dir}/template
+
+printf "oc template updated\n"
