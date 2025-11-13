@@ -1,5 +1,9 @@
 # xlibre
 
+
+> _**repository provides binary packages for:** x86_64-glibc_
+
+
 > [!NOTE]
 >>  _How to use_
 >>> _type in the terminal_
