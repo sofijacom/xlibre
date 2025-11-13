@@ -6,7 +6,7 @@ __dir="$(dirname "${BASH_SOURCE[0]}")"
 
 LATEST_VERSION=$(git ls-remote --tags --refs --sort="v:refname" https://github.com/X11Libre/xf86-input-wacom xlibre-xf86-input-wacom-\* | tail -n1 | sed 's/.*\///')
 export VERSION=${LATEST_VERSION#"xlibre-xf86-input-wacom-"}
-CUR_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
+CURRENT_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
 #CUR_TIMESTAMP=$(grep -E '^timestamp=' ${__dir}/template | cut -d= -f2)
 #CURRENT_VERSION=$(printf "%s-%s" "${CUR_VERSION}") # "${CUR_TIMESTAMP}"
 
