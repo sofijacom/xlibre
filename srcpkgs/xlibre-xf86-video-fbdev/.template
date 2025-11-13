@@ -15,6 +15,7 @@ distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-
 checksum=${SHA256}
 lib32disabled=yes
 
+CFLAGS="-I$XBPS_CROSS_BASE/usr/include/xorg"
 LDFLAGS="-Wl,-z,lazy"
 
 pre_configure() {

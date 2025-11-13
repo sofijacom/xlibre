@@ -29,6 +29,8 @@ jobs:
     - run: bash ./srcpkgs/xlibre-xf86-video-nouveau/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-video-intel/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-video-dummy/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-fbdev/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-vesa/update.sh
     # - run: bash ./srcpkgs/xlibre-xf86-input-wacom/update.sh
     - name: Check for updates
       id: check-updates
