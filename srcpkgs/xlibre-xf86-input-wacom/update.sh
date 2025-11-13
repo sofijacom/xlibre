@@ -7,13 +7,13 @@ __dir="$(dirname "${BASH_SOURCE[0]}")"
 LATEST_VERSION=$(git ls-remote --tags --refs --sort="v:refname" https://github.com/X11Libre/xf86-input-wacom xlibre-xf86-input-wacom-\* | tail -n1 | sed 's/.*\///')
 VERSION=${LATEST_VERSION#"xlibre-xf86-input-wacom-"}
 CUR_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
-CUR_TIMESTAMP=$(grep -E '^timestamp=' ${__dir}/template | cut -d= -f2)
-CURRENT_VERSION=$(printf "%s-%s" "${CUR_VERSION}" "${CUR_TIMESTAMP}")
+#CUR_TIMESTAMP=$(grep -E '^timestamp=' ${__dir}/template | cut -d= -f2)
+CURRENT_VERSION=$(printf "%s-%s" "${CUR_VERSION}") # "${CUR_TIMESTAMP}"
 
 printf "Latest version is: %s\nLatest built version is: %s\n" "${VERSION}" "${CURRENT_VERSION}"
 [ "${CURRENT_VERSION}" = "${VERSION}" ] && printf "No new version to release\n" && exit 0
 
-export TIMESTAMP=${VERSION##*-}
+#export TIMESTAMP=${VERSION##*-}
 export VERSION=${VERSION%-*}
 
 # No preprepped checksum files, need to download the binary and calculate it myself
