@@ -1,4 +1,4 @@
-# xlibre
+# XLibre for VOID linux  ![void](https://github.com/sofijacom/yandex-browser/assets/107557749/0cb14595-dcea-4f79-84a4-0185b1df379d)
 
 
 > _**repository provides binary packages for:** x86_64-glibc_
