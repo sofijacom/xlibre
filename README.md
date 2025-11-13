@@ -42,4 +42,5 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 | xlibre-xf86-video-intel             | https://github.com/X11Libre/xf86-video-intel            | :heavy_check_mark: |
 | xlibre-xf86-video-dummy             | https://github.com/X11Libre/xf86-video-dummy            | :heavy_check_mark: |
 | xlibre-xf86-video-fbdev             | https://github.com/X11Libre/xf86-video-fbdev            | :heavy_check_mark: |
-
+| xlibre-xf86-video-vesa             | https://github.com/X11Libre/xf86-video-vesa              | :heavy_check_mark: |
+| xlibre-xf86-video-vmware            | https://github.com/X11Libre/xf86-video-vmware           | :heavy_check_mark: |
