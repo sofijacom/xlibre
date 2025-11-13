@@ -28,4 +28,4 @@ rm -rf xf86-input-wacom
 
 envsubst '${SHA256} ${VERSION} ${GIT_SHORT_COMMIT} ${TIMESTAMP}' < ${__dir}/.template > ${__dir}/template
 
-printf "oc template updated\n"
+printf "xlibre-xf86-input-wacom template updated\n"
