@@ -17,6 +17,7 @@ lib32disabled=yes
 replaces="xf86-input-libinput"
 conflicts="xf86-input-libinput"
 
+
 post_install() {
 	vlicense COPYING
 }
