@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 printf "Checking latest version\n"
 
 __dir="$(dirname "${BASH_SOURCE[0]}")"
