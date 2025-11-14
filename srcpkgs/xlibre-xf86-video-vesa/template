@@ -13,7 +13,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-vesa"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=ee53444d96db76c8c1e1e6ee86c54050c9c00e6066f8b8fac4819ce92369a49f
+checksum=c87e821b2a89cb3c487c1306bf192c57f3dbb775f34044fc2e32b95fd9573fdd
 lib32disabled=yes
 
 CFLAGS="-I$XBPS_CROSS_BASE/usr/include/xorg"
