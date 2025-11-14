@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# ignore="*.99.*"
 
 printf "Checking latest version\n"
 
