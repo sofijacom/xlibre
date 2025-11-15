@@ -37,6 +37,7 @@ jobs:
     - run: bash ./srcpkgs/xlibre-xf86-video-qxl/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-joystick/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-elographics/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-voodoo/update.sh
 
     - name: Check for updates
       id: check-updates
