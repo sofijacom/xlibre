@@ -40,6 +40,7 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 | xlibre-xf86-input-synaptics-devel   | https://github.com/X11Libre/xf86-input-synaptics        | :heavy_check_mark: |
 | xlibre-xf86-input-joystick          | https://github.com/X11Libre/xf86-input-joystick         | :heavy_check_mark: |
 | xlibre-xf86-input-joystick-devel    | https://github.com/X11Libre/xf86-input-joystick         | :heavy_check_mark: |
+| xlibre-xf86-input-elographics       | https://github.com/X11Libre/elographics                 | :heavy_check_mark: |
 | xlibre-xf86-input-wacom             | https://github.com/X11Libre/xf86-input-wacom            | :heavy_check_mark: |
 | xlibre-xf86-input-vmmouse           | https://github.com/X11Libre/xf86-input-vmmouse          | :heavy_check_mark: |
 | xlibre-xf86-video-amdgpu            | https://github.com/X11Libre/xf86-video-amdgpu           | :heavy_check_mark: |
