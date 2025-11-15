@@ -21,7 +21,7 @@ LDFLAGS="-Wl,-z,lazy"
 pre_configure() {
 
     autoreconf -fi
-  ./configure --enable-xspice --prefix=/usr
+  ./configure --prefix=/usr
   make
 }
 
