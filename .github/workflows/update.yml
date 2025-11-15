@@ -33,6 +33,7 @@ jobs:
     - run: bash ./srcpkgs/xlibre-xf86-video-vesa/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-video-vmware/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-wacom/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-sisusb/update.sh
     - name: Check for updates
       id: check-updates
       run: |
