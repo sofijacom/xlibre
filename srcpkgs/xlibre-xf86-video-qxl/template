@@ -25,7 +25,12 @@ pre_configure() {
   make
 }
 
+do_install() {
+
+	vinstall 644 scripts/Xspice "${DESTDIR}"/usr/bin/Xspice
+)
+
 post_install() {
 	vlicense COPYING
-	vinstall 644 scripts/Xspice "${DESTDIR}"/usr/bin/Xspice
+
 }
