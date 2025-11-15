@@ -1,5 +1,5 @@
 # Template file for 'xf86-video-qxl'
-pkgname=xlibre-xf86-video-sisusb
+pkgname=xlibre-xf86-video-qxl
 _pkgname=xf86-video-qxl
 version=${VERSION}
 revision=1
@@ -19,10 +19,6 @@ lib32disabled=yes
 LDFLAGS="-Wl,-z,lazy"
 
 pre_configure() {
-
-#  ./autogen.sh
-#  ./configure --prefix=/usr
-#  make
 
     autoreconf -fi
   ./configure --enable-xspice --prefix=/usr
