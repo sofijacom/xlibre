@@ -27,5 +27,5 @@ pre_configure() {
 
 post_install() {
 	vlicense COPYING
-	vinstall -v -Dm0755 scripts/Xspice "${DESTDIR}"/usr/bin/Xspice
+	vinstall 755 scripts/Xspice "${DESTDIR}"/usr/bin/Xspice
 }
