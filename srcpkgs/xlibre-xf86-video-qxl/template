@@ -6,7 +6,7 @@ revision=1
 archs="x86_64*"
 build_style=gnu-configure
 hostmakedepends="pkg-config automake m4 xorg-util-macros libtool python spice"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf python spice spice-protocol xorgproto automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf spice-protocol xorgproto automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
 depends="virtual?xserver-abi-video-25_1"
 short_desc="XLibre fork of X.Org X11 qxl video driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -24,11 +24,6 @@ pre_configure() {
   ./configure --prefix=/usr
   make
 }
-
-do_install() {
-
-	vinstall 644 scripts/Xspice "${DESTDIR}"/usr/bin/Xspice
-)
 
 post_install() {
 	vlicense COPYING
