@@ -1,4 +1,4 @@
-# Template file for 'xlibre'
+# Template file for 'xlibre-server'
 pkgname=xlibre-server
 version=25.0.0.15
 revision=1
