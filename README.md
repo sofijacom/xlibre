@@ -56,3 +56,15 @@ _These packages will now be in your **OctoXBPS** package manager. When a new ver
 | xlibre-xf86-video-voodoo            | https://github.com/X11Libre/xf86-video-voodoo           | :heavy_check_mark: |
 
 
+<div align="center">
+
+# XFCE with XLibre X Server
+
+<img width="750" height="422" alt="Screenshot-20251112T130742" src="https://github.com/user-attachments/assets/d55db586-16b8-47db-b043-ec032fda4ff4" />
+
+
+<div align="center">
+
+# Cinnamon with XLibre X Server
+
+![Screenshot-20251117T225320](https://github.com/user-attachments/assets/3acff304-b175-4272-b308-96fa1b89a636)
