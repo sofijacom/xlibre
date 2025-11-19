@@ -9,7 +9,7 @@
 >>> _type in the terminal_
 
 ```
-printf "repository=https://github.com/sofijacom/Kennel-Linux/xlibre/releases/latest/download/\n" | sudo tee /etc/xbps.d/99-repository-xlibre.conf
+printf "repository=https://github.com/Kennel-Linux/xlibre/releases/latest/download/\n" | sudo tee /etc/xbps.d/99-repository-xlibre.conf
 ```
 
 > [!IMPORTANT]
