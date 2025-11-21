@@ -1,7 +1,7 @@
 # Template file for 'xf86-input-void'
 pkgname=xlibre-xf86-input-void
 _pkgname=xf86-input-void
-version=1.4.2.2
+version=xlibre-xf86-input-void-1.4.2.2
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
@@ -12,7 +12,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="custom"
 homepage="https://github.com/X11Libre/xf86-input-void"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=f551a1d295a798dca3ad6d9daf45c6d19dc7ed60525f71f090d087152c5b3f7b
+checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
 lib32disabled=yes
 
 pre_configure() {
