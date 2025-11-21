@@ -12,7 +12,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="custom"
 homepage="https://github.com/X11Libre/xf86-input-void"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
+checksum=f551a1d295a798dca3ad6d9daf45c6d19dc7ed60525f71f090d087152c5b3f7b
 lib32disabled=yes
 
 pre_configure() {
