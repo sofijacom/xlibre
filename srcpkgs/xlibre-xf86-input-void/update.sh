@@ -5,7 +5,7 @@ printf "Checking latest version\n"
 __dir="$(dirname "${BASH_SOURCE[0]}")"
 
 LATEST_VERSION=$(gh release list --repo X11Libre/xf86-input-void --json name,tagName,isLatest --jq '.[] | select(.isLatest)|.tagName')
-export VERSION=${LATEST_VERSION#" xlibre-xf86-input-void-"}
+export VERSION=${LATEST_VERSION#"xlibre-xf86-input-void-"}
 CURRENT_VERSION=$(grep -E '^version=' ${__dir}/template | cut -d= -f2)
 
 printf "Latest version is: %s\nLatest built version is: %s\n" "${VERSION}" "${CURRENT_VERSION}"
@@ -19,4 +19,4 @@ rm ./ ${VERSION}.tar.gz
 
 envsubst '${SHA256} ${VERSION}' < ${__dir}/.template > ${__dir}/template
 
-printf " xlibre-xf86-input-void template updated\n"
+printf "xlibre-xf86-input-void template updated\n"
