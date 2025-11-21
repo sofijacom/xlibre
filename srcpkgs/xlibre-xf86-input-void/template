@@ -1,7 +1,7 @@
 # Template file for 'xf86-input-void'
 pkgname=xlibre-xf86-input-void
 _pkgname=xf86-input-void
-version=xlibre-xf86-input-void-1.4.2.2
+version=1.4.2.2
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
