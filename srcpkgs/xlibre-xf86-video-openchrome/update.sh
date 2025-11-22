@@ -29,3 +29,4 @@ rm -rf xf86-video-openchrome
 envsubst '${SHA256} ${VERSION} ${GIT_SHORT_COMMIT} ${TIMESTAMP}' < ${__dir}/.template > ${__dir}/template
 
 printf "xlibre-xf86-video-openchrome template updated\n"
+
