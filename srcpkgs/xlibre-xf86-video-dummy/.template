@@ -11,7 +11,7 @@ short_desc="XLibre dummy video driver"
 maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://lists.freedesktop.org/mailman/listinfo/amd-gfx"
-distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${_pkgname}-${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
 checksum=${SHA256}
 lib32disabled=yes
 
