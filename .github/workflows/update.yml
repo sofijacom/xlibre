@@ -40,6 +40,7 @@ jobs:
     - run: bash ./srcpkgs/xlibre-xf86-video-voodoo/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-input-void/update.sh
     - run: bash ./srcpkgs/xlibre-xf86-video-cirrus/update.sh
+    - run: bash ./srcpkgs/xlibre-xf86-video-r128/update.sh
     - name: Check for updates
       id: check-updates
       run: |
