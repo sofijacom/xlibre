@@ -143,7 +143,7 @@ jobs:
           name: ${{ env.SHORT_SHA }}
           tag_name: ${{ env.TAG }}
           files: |
-            ./hostdir/binpkgs/*.xbps
-            ./hostdir/binpkgs/*.sha256sum            
+            ./hostdir/binpkgs/*.xbps            
             ./hostdir/binpkgs/*.sig2
+            ./hostdir/binpkgs/*.sha256sum
             ./hostdir/binpkgs/*repodata
