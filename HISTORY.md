@@ -104,17 +104,3 @@ the driver repositories are now moved to github:
 | xf86-video-voodoo:        | https://github.com/X11Libre/xf86-video-voodoo         |
 | xf86-video-wsfb:          | https://github.com/X11Libre/xf86-video-wsfb           |
 | xf86-video-xgi:           | https://github.com/X11Libre/xf86-video-xgi            |
-
-
-#### Contact
-
-|  |  |
-| --- | --- |
-| Mailing list:                     | https://www.freelists.org/list/xlibre |
-| Telegram channel:                 | https://t.me/x11dev |
-| Matrix room (mirror of tg group): | https://matrix.to/#/#xlibre:matrix.org |
-
----
-
-Source: [xserver/README.md at fea8b78 - X11Libre/xserver - Github](https://github.com/X11Libre/xserver/blob/fea8b78358a169238a288952b77e15422837e8a5/README.md)<br>
-Also see: [History for README.md - X11Libre/xserver - Github](https://github.com/X11Libre/xserver/commits/master/README.md)
