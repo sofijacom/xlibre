@@ -1,5 +1,3 @@
----
-
 ### XLibre Xserver
 
 Xlibre is a fork of the Xorg Xserver, with lots of code cleanups
