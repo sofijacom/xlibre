@@ -5,9 +5,6 @@ and enhanced functionality.
 
 #### Driver repositories
 
-Since Redhat had deleted and banned all X11Libre repositories from freedesktop.org,
-the driver repositories are now moved to github:
-
 | Driver | Git repository |
 | --- | --- |
 | xf86-input-elographics:   | https://github.com/X11Libre/xf86-input-elographics    |
