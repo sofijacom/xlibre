@@ -1,3 +1,6 @@
+<img width="120" height="120" alt="Снимок экрана_20251130_185152" src="https://github.com/user-attachments/assets/83f9f0ca-5547-4f40-9c7c-53675a2a8799" />
+
+
 # XLibre for VOID linux  ![void](https://github.com/sofijacom/yandex-browser/assets/107557749/0cb14595-dcea-4f79-84a4-0185b1df379d)
 
 
