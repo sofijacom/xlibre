@@ -1,19 +1,19 @@
 # Template file for 'xf86-video-amdgpu'
 pkgname=xlibre-xf86-video-amdgpu
 _pkgname=xf86-video-amdgpu
-version=23.0.0.6
+version=23.0.0.7
 revision=1
+archs="x86_64*"
 build_style=gnu-configure
-configure_args="--prefix=/usr --enable-glamor"
 hostmakedepends="pkg-config"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common xorgproto autoconf automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros eudev-libudev-devel libpciaccess-devel pixman-devel libXfont2-devel"
-depends="virtual?xserver-abi-video-28_1 mesa-dri"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf xorgproto automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
 short_desc="XLibre fork of X.Org amdgpu video driver"
 maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-amdgpu"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=27c6cc0a8e024517ccf9c044b84fef70eb9a43c328c147ddeb2251e30a5af04c
+checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
 lib32disabled=yes
 LDFLAGS="-Wl,-z,lazy"
 
