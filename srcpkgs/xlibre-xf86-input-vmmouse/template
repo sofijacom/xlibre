@@ -18,7 +18,7 @@ lib32disabled=yes
 
 pre_configure() {
   ./autogen.sh
-  ./configure  --prefix=/usr --with-udev-rules-dir=/usr/lib/udev/rules.d
+  ./configure --prefix=/usr --with-udev-rules-dir=/usr/lib/udev/rules.d
   make
 }
 
