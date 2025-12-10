@@ -1,11 +1,11 @@
 # Template file for 'xf86-input-vmmouse'
 pkgname=xlibre-xf86-input-vmmouse
 _pkgname=xf86-input-vmmouse
-version=13.2.0.3
+version=13.2.0.4
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake fakeroot gawk gettext libtool m4 pkgconf xorg-util-macros"
+makedepends="xlibre-server xlibre-server-devel xlibre-server-common autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
 depends="virtual?xserver-abi-input-26_1"
 short_desc="XLibre fork of X.Org VMWare Mouse input driver"
 maintainer="Sofiya <sofiya@v.com>"
@@ -13,7 +13,7 @@ license="custom"
 homepage="https://github.com/X11Libre/xf86-input-vmmouse"
 conflicts="xf86-input-vmmouse xorg-server"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=326e94e6bfe2fc1387c33f4ae1c964729646c1939e4748af3d0e1e5024c7ce7f
+checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
 lib32disabled=yes
 
 pre_configure() {
