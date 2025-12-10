@@ -13,7 +13,7 @@ license="custom"
 homepage="https://github.com/X11Libre/xf86-input-vmmouse"
 conflicts="xf86-input-vmmouse xorg-server"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
+checksum=4166bd8225590c93c26f9be90c4cf0fa924a28e1898e1435d4fc3e4395151327
 lib32disabled=yes
 
 pre_configure() {
