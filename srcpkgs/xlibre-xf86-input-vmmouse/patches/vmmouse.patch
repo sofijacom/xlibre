@@ -1,5 +1,5 @@
---- xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.1/src/vmmouse.c.orig    2025-12-07 13:30:55.471853303 +0200
-+++ xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.1/src/vmmouse.c 2025-12-07 13:31:18.703854701 +0200
+--- xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.4/src/vmmouse.c.orig    2025-12-07 13:30:55.471853303 +0200
++++ xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.4/src/vmmouse.c 2025-12-07 13:31:18.703854701 +0200
 @@ -52,6 +52,7 @@
  #include <X11/Xproto.h>
 
@@ -8,8 +8,8 @@
 
  #ifdef XINPUT
  #include <X11/extensions/XI.h>
---- xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.1/shared/vmmouse_proto.h.orig   2025-12-07 13:29:16.483847347 +0200
-+++ xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.1/shared/vmmouse_proto.h        2025-12-07 13:29:40.401848786 +0200
+--- xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.4/shared/vmmouse_proto.h.orig   2025-12-07 13:29:16.483847347 +0200
++++ xf86-input-vmmouse-xlibre-xf86-input-vmmouse-13.2.0.4/shared/vmmouse_proto.h        2025-12-07 13:29:40.401848786 +0200
 @@ -43,6 +43,7 @@
  #else
  #include "xf86_libc.h"
