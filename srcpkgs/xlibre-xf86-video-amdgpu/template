@@ -13,7 +13,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-amdgpu"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
+checksum=5b59723882fcc314d8677b9859df2d9b19861fd3a9543461232fd33e59d4f332
 lib32disabled=yes
 LDFLAGS="-Wl,-z,lazy"
 

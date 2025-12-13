@@ -14,7 +14,7 @@ maintainer="Sofiya <sofiya@v.com>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-intel"
 distfiles="https://github.com/X11Libre/${_pkgname}/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=0187e57331daefa75ddc33a4f878ef4c08526b83dc91dbc51a25375d2ff33b8c
+checksum=5be44aa05eea12df5999f01ae3ccfc9ed969e89801a3af214cac23581e0721ea
 lib32disabled=yes
 
 CFLAGS="-fcommon"

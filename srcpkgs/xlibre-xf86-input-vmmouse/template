@@ -17,12 +17,10 @@ checksum=4166bd8225590c93c26f9be90c4cf0fa924a28e1898e1435d4fc3e4395151327
 lib32disabled=yes
 
 pre_configure() {
-
   ./autogen.sh
   ./configure --prefix=/usr \
     --with-udev-rules-dir=/usr/lib/udev/rules.d
   make
-
 }
 
 post_install() {
